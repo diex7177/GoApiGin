@@ -1,12 +1,8 @@
-package controller
+package healthStatus
 
 import (
 	"github.com/gin-gonic/gin"
 )
-
-type iHealthStatus interface {
-	Ping(c *gin.Context)
-}
 
 type healthStatus struct{}
 

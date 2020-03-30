@@ -1,7 +1,7 @@
 package main
 
 import (
-	controller "GoApiGin/src/api/internal/controllers"
+	controller "GoApiGin/src/api/internal/controllers/healthStatus"
 
 	"github.com/gin-gonic/gin"
 )
