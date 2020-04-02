@@ -4,17 +4,13 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
-type healthStatus struct{}
-
-/*
-Ping return a message pong
-*/
-func Ping(c *gin.Context) {
-	h := healthStatus{}
-	h.ping(c)
+//Controller ...
+type Controller struct {
+	IHealthStatus
 }
 
-func (h healthStatus) ping(c *gin.Context) {
+//SendPong ...
+func (controller Controller) SendPong(c *gin.Context) {
 	//return message "pong" and status code 200
 	c.JSON(200, gin.H{
 		"message": "pong",
